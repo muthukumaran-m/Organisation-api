@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print Message
-      run: echo "Hello, world! ${{ env.TEST_VARIABLE }}"
+      run: echo "Hello, world! ${{ vars.TEST_VARIABLE }}"
