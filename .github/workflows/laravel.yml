@@ -1,0 +1,13 @@
+name: Print Message
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print_message:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Message
+      run: echo "Hello, world!"
