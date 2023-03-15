@@ -8,6 +8,7 @@ on:
 jobs:
   print_message:
     runs-on: ubuntu-latest
+    environment: stage
     steps:
     - name: Print Message
       run: echo "Hello, world! ${{ vars.TEST_VARIABLE }}"
