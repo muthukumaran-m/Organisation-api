@@ -6,9 +6,12 @@ on:
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Download code-coverage.xml
-        uses: actions/download-artifact@v3
-        with:
+     - name: Download code-coverage.xml
+       run: echo s@'$GITHUB_WORKSPACE'/@/@g composer.json
+     - name: Download code-coverage.xml
+       uses: actions/download-artifact@v3
+       with:
           name: coverage-xml-artifact
-          path: /composer.json
+          path: s@'$GITHUB_WORKSPACE'/@/@g composer.json
