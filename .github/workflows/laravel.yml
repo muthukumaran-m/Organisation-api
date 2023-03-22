@@ -21,3 +21,6 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@master
         env:
           SONAR_TOKEN: 60fced35a652dffaca2d8a2059fc445f5e10afc7
+        with:
+           organization: "Organisation-api"
+           project: "muthukumaran-m"
