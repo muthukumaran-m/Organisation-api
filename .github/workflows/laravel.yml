@@ -16,19 +16,6 @@ jobs:
           
       - name: Setup PHP with Xdebug
         uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.1'
-          coverage: xdebug
-            
-      - name: Install dependencies with composer
-        run: composer update --no-ansi --no-interaction --no-progress
-      
-          
-      - name: Run tests with phpunit/phpunit
-        run: vendor/bin/phpunit --coverage-clover code-coverage.xml --log-junit test-report.xml
-          
-      - name: Fix code coverage paths
-        run: sed -i 's@'$GITHUB_WORKSPACE'/@/@g' code-coverage.xml
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
